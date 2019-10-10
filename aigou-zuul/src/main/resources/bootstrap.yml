@@ -1,0 +1,15 @@
+#注册到eureka中，并显示ip
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+spring:
+  cloud:
+    config:
+      profile: dev
+      name: application-zuul
+      discovery:
+        service-id: AIGOU-CONFIG #配置中心的集群服务
+        enabled: true

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="aigou-basic-util" />
+        <module name="aigou-config-service" />
         <module name="aigou-eureka" />
         <module name="aigou-zuul" />
         <module name="plat-interface" />
@@ -16,6 +17,8 @@
     <bytecodeTargetLevel>
       <module name="aigou-basic" target="1.5" />
       <module name="aigou-basic-util" target="1.5" />
+      <module name="aigou-config-server" target="1.5" />
+      <module name="aigou-config-service" target="1.5" />
       <module name="aigou-eureka" target="1.5" />
       <module name="aigou-parent" target="1.5" />
       <module name="aigou-plat-parent" target="1.5" />
