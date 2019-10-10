@@ -1,0 +1,12 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: AIGOU-PLAT
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
