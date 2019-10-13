@@ -1,0 +1,13 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: AIGOU-PRODUCT
+  datasource:
+    driver-class-name:
+    com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///aigou-product?serverTimezone=GMT%2B8
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath*:cn/itsource/aigou/mapper/*Mapper.xml

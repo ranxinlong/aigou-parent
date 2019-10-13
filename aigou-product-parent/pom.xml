@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aigou-basic</artifactId>
+    <artifactId>aigou-product-parent</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>aigou-basic-util</module>
-        <module>aigou-basic-generator</module>
+        <module>product-interface</module>
+        <module>product-service</module>
     </modules>
 
 

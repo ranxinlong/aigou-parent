@@ -13,8 +13,8 @@
         <module>aigou-plat-parent</module>
         <module>aigou-zuul</module>
         <module>aigou-basic</module>
-        <module>aigou-config-server</module>
         <module>aigou-config-service</module>
+        <module>aigou-product-parent</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
