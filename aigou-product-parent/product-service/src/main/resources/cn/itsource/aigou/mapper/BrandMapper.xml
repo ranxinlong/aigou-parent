@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.aigou.mapper.BrandMapper">
+
+    <select id="queryPage" resultMap="BaseResultMap">
+    SELECT
+        tb.*,tp.name typename,tp.id typeid
+        FROM t_brand tb LEFT JOIN t_product_type tp ON tb.product_type_id = tp.id
+        <include refid="whereSql"/>
+    </select>
+    <sql id="whereSql">
+        <where>
+            <if test="query.keyword != null">
+                AND (tb.name LIKE concat('%',#{query.keyword},'%')
+                  OR tb.englishName LIKE concat('%',#{query.keyword},'%')
+                  OR tp.name LIKE concat('%',#{query.keyword},'%')
+                )
+            </if>
+        </where>
+    </sql>
+    <resultMap id="BaseResultMap" type="cn.itsource.aigou.domain.Brand">
+        <id column="id" property="id" />
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+        <result column="name" property="name" />
+        <result column="englishName" property="englishName" />
+        <result column="firstLetter" property="firstLetter" />
+        <result column="description" property="description" />
+        <result column="product_type_id" property="productTypeId" />
+        <result column="sortIndex" property="sortIndex" />
+        <result column="logo" property="logo" />
+        <association property="productType" javaType="cn.itsource.aigou.domain.ProductType">
+            <id column="typeid" property="id"/>
+            <result column="typename" property="name"/>
+        </association>
+    </resultMap>
+
+
+</mapper>

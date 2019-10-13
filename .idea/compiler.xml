@@ -33,7 +33,7 @@
       <module name="asd" target="1.5" />
       <module name="plat-interface" target="1.5" />
       <module name="plat-service" target="1.5" />
-      <module name="product-interface" target="1.5" />
+      <module name="product-interface" target="1.7" />
       <module name="product-seervice" target="1.5" />
       <module name="product-service" target="1.7" />
       <module name="product_service" target="1.5" />
