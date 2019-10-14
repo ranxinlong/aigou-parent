@@ -55,6 +55,18 @@ public class ProductTypeController {
         }
     }
 
+
+    @GetMapping("/genHomePage")
+    public AjaxResult genHomePage(){
+        try {
+            productTypeService.genHomePage();
+            return AjaxResult.me().setSuccess(true).setMessage("成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(true).setMessage("失败失败！"+e.getMessage());
+        }
+    }
+
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ProductType get(@PathVariable("id") Long id)
