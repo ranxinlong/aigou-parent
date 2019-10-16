@@ -59,6 +59,13 @@
             <artifactId>velocity</artifactId>
             <version>1.7</version>
         </dependency>
+        <!--fastdfs图片上传的依赖-->
+        <dependency>
+            <groupId>cn.itsource</groupId>
+            <artifactId>fastdfs</artifactId>
+            <version>1.20</version>
+        </dependency>
+
     </dependencies>
 
 </project>

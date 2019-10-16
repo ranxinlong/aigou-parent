@@ -24,8 +24,6 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements
 
     @Override
     public PageList<Brand> queryPage(BrandQuery query) {
-        System.out.println("-------------------------");
-        System.out.println(query.getPage()+":"+query.getRows());
         IPage<Brand> brandIPage =baseMapper.queryPage(new Page(query.getPage(), query.getRows()), query);
         PageList<Brand> pageList = new PageList<>(brandIPage.getTotal(), brandIPage.getRecords());
         return pageList;

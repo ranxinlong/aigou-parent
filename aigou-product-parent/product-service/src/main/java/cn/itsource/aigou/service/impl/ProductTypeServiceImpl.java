@@ -57,18 +57,6 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
         model.put("staticRoot", "D:\\software\\JetBrains\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\");
         staticPageClient.generateStaticPage(templatePath, targetPath, model);
     }
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public List<ProductType> loadTypeTree() {
 

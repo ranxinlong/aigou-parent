@@ -30,10 +30,14 @@ public class BrandController {
     public AjaxResult save(@RequestBody Brand brand){
         try {
             if(brand.getId()!=null){
+                //写入修改时间
+                brand.setUpdateTime(System.currentTimeMillis());
                 brandService.updateById(brand);
             }else{
                 /*.toUpperCase(),把字母变为大写*/
                 brand.setFirstLetter(LetterUtil.getFirstLetter(brand.getName()).toUpperCase());
+                //写入创建时间
+                brand.setCreateTime(System.currentTimeMillis());
                 brandService.save(brand);
             }
             return AjaxResult.me();
