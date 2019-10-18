@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.aigou.mapper.ProductExtMapper">
+
+    <select id="findOne" resultType="cn.itsource.aigou.domain.ProductExt" parameterType="long">
+        SELECT * FROM t_product_ext WHERE product_id =  #{productId}
+    </select>
+
+    <select id="deleteByProId">
+        DELETE FROM t_product_ext WHERE product_id = #{productId}
+    </select>
+</mapper>
