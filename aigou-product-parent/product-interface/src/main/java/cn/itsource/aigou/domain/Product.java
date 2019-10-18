@@ -125,5 +125,20 @@ public class Product implements Serializable {
     @TableField("badCommentCount")
     private Integer badCommentCount;
 
+    @TableField("skuProperties")
+    private String skuProperties;
+
+    @TableField("medias")
+    private String medias;
+
+    @TableField(exist = false)
+    private ProductType productType;
+
+
+    @TableField(exist = false)
+    private Brand brand;
+
+    @TableField(exist = false)
+    private ProductExt ext;
 
 }

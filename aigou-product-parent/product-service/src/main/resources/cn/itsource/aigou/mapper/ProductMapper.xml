@@ -2,4 +2,49 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.itsource.aigou.mapper.ProductMapper">
 
+    <select id="queryPage" resultMap="BaseResultMap">
+        SELECT p.*,pt.name typename,b.name brandname from t_product p
+        left join t_product_type pt on p.product_type_id = pt.id
+        left join t_brand b on p.brand_id = b.id
+        <include refid="wheresql" />
+    </select>
+    <sql id="wheresql">
+        <where>
+            <if test="query.keyword != null">
+                AND (p.name LIKE concat('%',#{query.keyword},'%')
+                OR  p.subName LIKE concat('%',#{query.keyword},'%')
+                )
+            </if>
+        </where>
+    </sql>
+    <resultMap id="BaseResultMap" type="cn.itsource.aigou.domain.Product">
+        <id column="id" property="id"/>
+        <result column="createTime" property="createTime"/>
+        <result column="name" property="name"/>
+        <result column="subName" property="subName"/>
+        <result column="code" property="code"/>
+        <result column="product_type_id" property="productTypeId"/>
+        <result column="onSaleTime" property="onSaleTime" />
+        <result column="offSaleTime" property="offSaleTime" />
+        <result column="brand_id" property="brandId"/>
+        <result column="state" property="state"/>
+        <result column="maxPrice" property="maxPrice"/>
+        <result column="saleCount" property="saleCount"/>
+        <result column="viewCount" property="viewCount"/>
+        <result column="commentCount" property="commentCount"/>
+        <result column="commentScore" property="commentScore"/>
+        <result column="viewProperties" property="viewProperties"/>
+        <result column="goodCommentCount" property="goodCommentCount"/>
+        <result column="commonCommentCount" property="commonCommentCount"/>
+        <result column="badCommentCount" property="badCommentCount"/>
+        <result column="skuProperties" property="skuProperties"/>
+        <association property="productType" javaType="cn.itsource.aigou.domain.ProductType">
+            <id column="product_type_id" property="id"/>
+            <result column="typename" property="name"/>
+        </association>
+        <association property="brand" javaType="cn.itsource.aigou.domain.Brand">
+            <id column="brand_id" property="id"/>
+            <result column="brandname" property="name"/>
+        </association>
+    </resultMap>
 </mapper>
