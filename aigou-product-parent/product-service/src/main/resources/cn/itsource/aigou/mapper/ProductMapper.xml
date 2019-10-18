@@ -38,6 +38,7 @@
         <result column="commonCommentCount" property="commonCommentCount"/>
         <result column="badCommentCount" property="badCommentCount"/>
         <result column="skuProperties" property="skuProperties"/>
+        <result column="medias" property="medias"/>
         <association property="productType" javaType="cn.itsource.aigou.domain.ProductType">
             <id column="product_type_id" property="id"/>
             <result column="typename" property="name"/>
