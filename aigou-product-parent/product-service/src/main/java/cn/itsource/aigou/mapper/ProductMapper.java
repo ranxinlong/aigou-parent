@@ -18,4 +18,12 @@ import org.apache.ibatis.annotations.Param;
 public interface ProductMapper extends BaseMapper<Product> {
 
     IPage<Product> queryPage(Page page, @Param("query")ProductQuery query);
+
+    /**
+     * 根据productId在product表里面保存商品的显示属性（specification）
+     * @param productId
+     * @param specification
+     * @return
+     */
+    void saveViewProperties(@Param("productId") Long productId,@Param("specification") String specification);
 }
