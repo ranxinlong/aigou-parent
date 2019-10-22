@@ -2,6 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.itsource.aigou.mapper.ProductMapper">
 
+    <!--批量上架-->
+    <update id="onSale">
+        UPDATE t_product SET onSaleTime=#{onSaleTime},state=1
+        WHERE id IN 
+        <foreach collection="idList" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <!--批量下架-->
+    <update id="offSale">
+        UPDATE t_product SET offSaleTime=#{offSaleTime},state=0
+        WHERE id IN
+        <foreach collection="idlist" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <update id="saveSkuProperties">
+        UPDATE t_product SET skuProperties = #{skupropertions} WHERE id=#{productId}
+    </update>
+
     <update id="saveViewProperties">
         UPDATE t_product SET viewProperties = #{specification} WHERE id=#{productId}
     </update>

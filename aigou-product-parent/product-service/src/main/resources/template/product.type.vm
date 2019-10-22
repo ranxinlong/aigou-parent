@@ -24,7 +24,7 @@
 							<!-- 三级分类循环体 -->
 							#if ($secondType.children)
 							#foreach ($thirdType in $secondType.children)
-							<a href="/list?productType=${thirdType.id}" target="_blank" title="${thirdType.name}">${thirdType.name}</a> 
+							<a href="/list.html?productType=${thirdType.id}" target="_blank" title="${thirdType.name}">${thirdType.name}</a>
 							#end
 							#end
 						</dd>

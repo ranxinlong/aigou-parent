@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * <p>
@@ -26,4 +29,22 @@ public interface ProductMapper extends BaseMapper<Product> {
      * @return
      */
     void saveViewProperties(@Param("productId") Long productId,@Param("specification") String specification);
+        /**
+        * 根据productId修改商品的sku属性，并在t_sku表里面添加数据进入
+     * @param productId
+         * @param skupropertions  数据
+     */
+    void saveSkuProperties(@Param("productId") Long productId,@Param("skupropertions") String skupropertions);
+    /**
+     * 批量上架
+     * @param idList
+     * @return
+     */
+    void onSale(@Param("idList") List<Long> idList,@Param("onSaleTime") Long onSaleTime);
+    /**
+     * 批量下架
+     * @param idlist
+     * @return
+     */
+    void offSale(@Param("idlist") List<Long> idlist,@Param("offSaleTime") Long offSaleTime);
 }

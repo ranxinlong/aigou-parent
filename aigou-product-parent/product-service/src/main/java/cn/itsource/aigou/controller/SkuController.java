@@ -54,6 +54,16 @@ public class SkuController {
         }
     }
 
+    /**
+     * 根据productId的数据局获取t_sku表里面的数据
+     * @param productId
+     * @return
+     */
+    @RequestMapping(value="/getSku/{productId}",method=RequestMethod.GET)
+    public List<Sku> getSku(@PathVariable("productId") Long productId){
+     return skuService.getSku(productId);
+    }
+
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Sku get(@PathVariable("id") Long id)

@@ -2,4 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.itsource.aigou.mapper.SkuMapper">
 
+    <select id="getSku" resultType="cn.itsource.aigou.domain.Sku">
+        SELECT * FROM t_sku WHERE product_id = #{productId};
+    </select>
 </mapper>

@@ -55,7 +55,10 @@ public class ProductTypeController {
         }
     }
 
-
+    /**
+     * 生成home页
+     * @return
+     */
     @GetMapping("/genHomePage")
     public AjaxResult genHomePage(){
         try {

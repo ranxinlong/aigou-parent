@@ -4,11 +4,13 @@ import cn.itsource.aigou.domain.Product;
 import cn.itsource.aigou.domain.Specification;
 import cn.itsource.aigou.service.IProductService;
 import cn.itsource.aigou.query.ProductQuery;
+import cn.itsource.aigou.vo.SkuVo;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import cn.itsource.basic.util.StrUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,43 @@ import java.util.List;
 public class ProductController {
     @Autowired
     public IProductService productService;
+
+
+    /**
+     * 批量上架
+     * @param ids
+     * @return
+     */
+    @GetMapping("/onSale")
+    public AjaxResult onSale (@RequestParam("ids") String ids){
+        try {
+            List<Long> idList = StrUtils.splitStr2LongArr(ids);
+            productService.onSale(idList);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("上架失败");
+        }
+    }
+
+    /**
+     * 批量下架
+     * @param ids
+     * @return
+     */
+    @GetMapping("/offSale")
+    public AjaxResult offSale(@RequestParam("ids") String ids){
+        try {
+            List<Long> idlist = StrUtils.splitStr2LongArr(ids);
+            productService.offSale(idlist);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("下架失败");
+        }
+    }
+
+
 
     /**
     * 保存和修改公用的
@@ -92,6 +131,12 @@ public class ProductController {
             return AjaxResult.me().setSuccess(false).setMessage("保存失败");
         }
 
+    }
+
+    @PostMapping("/saveSkuProperties")
+    public AjaxResult saveSkuProperties(@RequestParam("productId") Long productId, @RequestBody SkuVo skuVo){
+        productService.saveSkuProperties(productId,skuVo);
+        return AjaxResult.me();
     }
 
 

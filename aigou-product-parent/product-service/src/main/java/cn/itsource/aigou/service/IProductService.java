@@ -3,6 +3,7 @@ package cn.itsource.aigou.service;
 import cn.itsource.aigou.domain.Product;
 import cn.itsource.aigou.domain.Specification;
 import cn.itsource.aigou.query.ProductQuery;
+import cn.itsource.aigou.vo.SkuVo;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -39,4 +40,18 @@ public interface IProductService extends IService<Product> {
      * @return
      */
     List<Specification> getSkuProperties(Long productId);
+
+    void saveSkuProperties(Long productId, SkuVo skuVo);
+    /**
+     * 批量上架
+     * @param idList
+     * @return
+     */
+    void onSale(List<Long> idList);
+    /**
+     * 批量下架
+     * @param idlist
+     * @return
+     */
+    void offSale(List<Long> idlist);
 }
