@@ -3,10 +3,12 @@ package cn.itsource.aigou.service.impl;
 
 import cn.itsource.aigou.admin.ProductDoc;
 import cn.itsource.aigou.client.ProductESClient;
+import cn.itsource.aigou.client.StaticPageClient;
 import cn.itsource.aigou.domain.*;
 import cn.itsource.aigou.mapper.*;
 import cn.itsource.aigou.query.ProductQuery;
 import cn.itsource.aigou.service.IProductService;
+import cn.itsource.aigou.vo.ProductTypeCrumbVo;
 import cn.itsource.aigou.vo.SkuVo;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
@@ -23,6 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -52,6 +55,12 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
 
     @Autowired
     private ProductESClient client;
+
+    @Autowired
+    private StaticPageClient pageClient;
+
+    @Autowired
+    private ProductTypeServiceImpl typeService;
 
 
 
@@ -246,8 +255,58 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         List<Product> products = baseMapper.selectBatchIds(idList);
         //3.再把查询出来的记过保存到ES里面
         List<ProductDoc> productDocList = products2Doc(products);
+        //上架的同时生成该商品的静态页面
+        staticDetailPage(products);
         client.saveBatch(productDocList);
     }
+
+    /**
+     * //上架的同时生成该商品的静态页面
+     * @param products
+     */
+    private void staticDetailPage(List<Product> products) {
+        for (Product product : products) {
+            //模板路径
+            String templatePath = "D:\\software\\JetBrains\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\template\\product.detail.vm";
+            String targetPath = "D:\\software\\JetBrains\\aigou-web-parent\\ecommerce\\detail\\"+product.getId()+".html";
+            Map<String,Object> model = new HashMap<>();
+            //获取面包屑的数据
+            List<ProductTypeCrumbVo> crumbVos = typeService.loadTypeCrumb(product.getProductTypeId());
+            model.put("product", product);
+            model.put("crumbs", crumbVos);
+            //SKU属性
+            String skuProperties = product.getSkuProperties();
+            List<Specification> skus = JSONArray.parseArray(skuProperties, Specification.class);
+            model.put("skus", skus);
+            //viewProperties 显示属性
+            String viewProperties = product.getViewProperties();
+            List<Specification> vies = JSONArray.parseArray(viewProperties, Specification.class);
+            model.put("vies", viewProperties);
+            //商品详情
+            ProductExt ext = productExtMapper.selectOne(new QueryWrapper<ProductExt>().eq("product_id", product.getId()));
+            String richContent = ext.getRichContent();
+            model.put("richContent", richContent);
+            //商品的媒体属性需要的一份图三分数据[[aaaa,aaa,aaa],[bbbb,bbbbb,bbbb],[ccccccc,cccccc,ccccc]],[aaaa,aaa,aaa]代表同一张图
+            String medias = product.getMedias();//aaa,bb,cc
+            String[] mediaarr = medias.split(",");//[aaa,bb,cc]
+
+            List<List<String>> medis = new ArrayList<>();
+            for (String mediass : mediaarr) {
+                List<String> oneMedis = new ArrayList<>();
+                oneMedis.add("http://172.16.4.128"+mediass);
+                oneMedis.add("http://172.16.4.128"+mediass);
+                oneMedis.add("http://172.16.4.128"+mediass);
+                medis.add(oneMedis);
+            }
+            String imags = JSON.toJSONString(medis);
+            model.put("imags", imags);
+            //skujsonstr
+            model.put("skuJSON", product.getSkuProperties());
+
+            pageClient.generateStaticPage(templatePath, targetPath, model);
+        }
+    }
+
     /**
      * 集合的转换，把product类型转换鞥装到productDoc里面
      * @param products

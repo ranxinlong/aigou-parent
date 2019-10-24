@@ -7,21 +7,21 @@
 		<title>爱购网 - 购我所爱 I LOVE BUY</title>
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-		<!-- 网站头像 -->
-		<link type="text/css" rel="stylesheet" href="../css/iconfont.css">
-		<link type="text/css" rel="stylesheet" href="../css/common.css">
-		<!--整站改色 _start-->
-		<link type="text/css" rel="stylesheet" href="../css/color-style.css">
-		<!--整站改色 _end-->
-		<link rel="stylesheet" href="../css/layer.css" id="layuicss-skinlayercss">
-		<script type="text/javascript" src="../js/jquery.js"></script>
-		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="../js/layer.js"></script>
-		<script type="text/javascript" src="../js/jquery.method.js"></script>
-		<script type="text/javascript" src="../js/jquery.modal.js"></script>
-		<script type="text/javascript" src="../js/common.js"></script>
-		<!-- 图片缓载js -->
-		<script type="text/javascript" src="../js/jquery.lazyload.js"></script>
+        <!-- 网站头像 -->
+        <link type="text/css" rel="stylesheet" href="/static/css/iconfont.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/common.css">
+        <!--整站改色 _start-->
+        <link type="text/css" rel="stylesheet" href="/static/css/color-style.css">
+        <!--整站改色 _end-->
+        <link rel="stylesheet" href="/static/css/layer.css" id="layuicss-skinlayercss">
+        <script type="text/javascript" src="/static/js/jquery.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/static/js/layer.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.method.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.modal.js"></script>
+        <script type="text/javascript" src="/static/js/common.js"></script>
+        <!-- 图片缓载js -->
+        <script type="text/javascript" src="/static/js/jquery.lazyload.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				// 搜索框提示显示
@@ -88,8 +88,8 @@
 				}
 			});
 		</script>
-		<script type="text/javascript" src="../js/vue/vue.js"></script>
-		<script type="text/javascript" src="../js/vue/axios.js"></script>
+		<script type="text/javascript" src="/static/js/vue/vue.js"></script>
+		<script type="text/javascript" src="/static/js/vue/axios.js"></script>
 	</head>
 
 	<body class="pace-done">
@@ -141,7 +141,7 @@
 					</li>
 					<li class="menu-item cartbox">
 						<div class="menu">
-							<a class="menu-hd cart" href="../cart.html" target="_top">
+							<a class="menu-hd cart" href="/static/cart.html" target="_top">
 								<i></i> 购物车
 								<span class="SZY-CART-COUNT">0</span>
 								<b></b>
@@ -172,7 +172,7 @@
 							<div id="menu-5" class="menu-bd we-chat-qrcode">
 								<span class="menu-bd-mask"></span>
 								<a target="_top">
-									<img src="../img/test/mall_wx_qrcode_0.jpg" alt="官方微信">
+									<img src="/static/img/test/mall_wx_qrcode_0.jpg" alt="官方微信">
 								</a>
 								<p class="font-14">关注官方微信</p>
 							</div>
@@ -200,7 +200,7 @@
 
 										<a href="article/info?id=38" target="_blank" title="商家合作">商家合作</a>
 
-										<a href="../list.html?cat_id=17" target="_blank" title="店铺街">店铺街</a>
+										<a href="/static/list.html?cat_id=17" target="_blank" title="店铺街">店铺街</a>
 
 									</div>
 								</div>
@@ -216,12 +216,12 @@
 			<div class="w1210">
 				<div class="logo-info">
 					<a href="/" class="logo">
-						<img src="../img/test/mall_logo_0.png">
+						<img src="/static/img/test/mall_logo_0.png">
 					</a>
 
 					<!-- logo右侧小广告 _start -->
 					<a href="#" class="logo-right">
-						<img src="../img/test/mall_logo_right_ad_image_0.png">
+						<img src="/static/img/test/mall_logo_right_ad_image_0.png">
 					</a>
 					<!-- logo右侧小广告 _end -->
 
@@ -327,7 +327,7 @@
 
 				<div class="header-right">
 					<a href="#" title="">
-						<img src="../img/test/mall_search_right_ad_image_0.png">
+						<img src="/static/img/test/mall_search_right_ad_image_0.png">
 					</a>
 				</div>
 
@@ -378,7 +378,7 @@
 							<!-- 导航小标签 _start -->
 
 							<span class="nav-icon">
-						<img src="../img/test/14766722355540.gif">
+						<img src="/static/img/test/14766722355540.gif">
 					</span>
 
 							<!-- 导航小标签 _end -->
@@ -403,7 +403,7 @@
 							<!-- 导航小标签 _start -->
 
 							<span class="nav-icon">
-						<img src="../img/test/14766722553394.gif">
+						<img src="/static/img/test/14766722553394.gif">
 					</span>
 
 							<!-- 导航小标签 _end -->
@@ -414,7 +414,7 @@
 							<!-- 导航小标签 _start -->
 
 							<span class="nav-icon">
-						<img src="../img/test/14794053929710.gif">
+						<img src="/static/img/test/14794053929710.gif">
 					</span>
 
 							<!-- 导航小标签 _end -->
@@ -431,11 +431,11 @@
 
 		<!-- 开始：主要区域内容 -->
 		<!-- css -->
-		<link type="text/css" rel="stylesheet" href="../css/goods.css">
+		<link type="text/css" rel="stylesheet" href="/static/css/goods.css">
 		<!-- 地区选择器 -->
-		<script type="text/javascript" src="../js/jquery.region.js"></script>
-		<script type="text/javascript" src="../js/jquery.widget.js"></script>
-		<script type="text/javascript" src="../js/jquery.history.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.region.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.widget.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.history.js"></script>
 		<div class="w1210">
 
 			<div class="breadcrumb clearfix">
@@ -446,9 +446,9 @@
 				#foreach($crumb in $model.crumbs)
 					<div class="crumbs-nav crumbs-nav0">
 						<a class="crumbs-title" href="http://www.itsource.cn/list.html?cat_id=27">
-							$!crumb.currentType.name
-							<i class="icon"></i>
-						</a>
+						$!crumb.productType.name
+                        <i class="icon"></i>
+                    </a>
 						<div class="crumbs-drop">
 							<ul class="crumbs-drop-list">
 
@@ -542,7 +542,7 @@
 					<!-- 商品相册容器 -->
 			<div class="goodsgallery"></div>
 			<script id="SZY_SKU_IMAGES" type="text">
-				$!model.medias
+				$!model.imags
 			</script>
 			<script type="text/javascript">
 				// 图片相册
@@ -551,7 +551,6 @@
 				});
 			</script>
 			<!--相册 END-->
-
 					<div class="goods-gallery-bottom">
 						<a href="javascript:void(0);" class="goods-compare compare-btn fr add-compare " data-goods-id="429" data-sku-id="6163" data-image-url="http://68products.oss-cn-beijing.aliyuncs.com/taobao-yun-images/41458920633/TB2K2cAaICO.eBjSZFzXXaRiVXa_!!1739732836.jpg?x-oss-process=image/resize,m_pad,limit_0,h_320,w_320">
 							<i></i> 对比
@@ -564,7 +563,7 @@
 
 						<div class="bdsharebuttonbox fr bdshare-button-style0-16" data-bd-bind="XXXXXXXXX">
 							<a class="bds_more" href="http://www.itsource.cn/6043.html#" data-cmd="more" style="background: none; color: #999; line-height: 25px; height: 25px; margin: 0px 10px; padding-left: 20px; display: block;">
-								<i style="width: 13px; height: 13px; background: transparent url(../css/goods-icon.png) no-repeat -113px -65px; vertical-align: middle; display: inline-block;"></i> 分享
+								<i style="width: 13px; height: 13px; background: transparent url(/static/css/goods-icon.png) no-repeat -113px -65px; vertical-align: middle; display: inline-block;"></i> 分享
 							</a>
 						</div>
 					</div>
@@ -591,7 +590,6 @@
 				<!-- 商品详细信息 _star-->
 				<div class="detail-info">
 					<form action="http://www.itsource.cn/6043.html" method="post" name="" id="">
-
 						<!-- 商品名称 -->
 						<h1 class="goods-name SZY-GOODS-NAME">$!model.product.subName</h1>
 						<!-- 商品简单描述 -->
@@ -801,7 +799,7 @@
 										<div id="phone-tan" style="display: none;">
 											<span class="arr"></span>
 											<div class="m-qrcode-wrap">
-												<img src="../img/test/mall_wx_qrcode_0.jpg" width="100" height="100">
+												<img src="/static/img/test/mall_wx_qrcode_0.jpg" width="100" height="100">
 											</div>
 										</div>
 									</a>
@@ -820,7 +818,7 @@
 				<div class="store-info">
 					<dl class="store-logo">
 						<a href="javascript:void(0);">
-							<img src="../img/test/default_shop_logo_0.gif" width="" height="">
+							<img src="/static/img/test/default_shop_logo_0.gif" width="" height="">
 						</a>
 					</dl>
 					<dl class="store-name third-store">
@@ -854,7 +852,7 @@
 					<dl class="store-other">
 						<dt>信 誉：</dt>
 						<dd>
-							<img src="../img/test/14653018315416.gif" class="rank" title="普通皇冠五">
+							<img src="/static/img/test/14653018315416.gif" class="rank" title="普通皇冠五">
 						</dd>
 					</dl>
 
@@ -868,7 +866,7 @@
 						<dt class="tool">客 服：</dt>
 						<dd class="tool">
 							<a href="javascript:void(0);" data-goods_id="429" class="service-btn">
-								<img src="../img/test/openim.png" width="20" height="20" border="0" alt="在线客服">
+								<img src="/static/img/test/openim.png" width="20" height="20" border="0" alt="在线客服">
 								<span>在线客服</span>
 							</a>
 						</dd>
@@ -878,7 +876,7 @@
 						<dt>工商执照：</dt>
 						<dd>
 							<a id="license" href="javascript:void(0);">
-								<img src="../img/test/national_emblem_light.png" height="18" title="工商执照">
+								<img src="/static/img/test/national_emblem_light.png" height="18" title="工商执照">
 							</a>
 						</dd>
 					</dl>
@@ -911,7 +909,7 @@
 					<!-- 客服组 -->
 
 					<div class="store-service">
-						<div class="store-logo"><img src="../img/test/service.png" width="" height=""></div>
+						<div class="store-logo"><img src="/static/img/test/service.png" width="" height=""></div>
 						<div class="store-service-group left-content">
 							<div class="store-service-type first">
 								<h4>在线咨询</h4>
@@ -920,52 +918,52 @@
 									<em>咨询客服qq</em>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服一</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服十</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服三</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服四</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服五</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服六</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服七</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服八</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服九</span>
 									</a>
 
 									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=xxxxxxxxxx&amp;site=qq&amp;menu=yes" class="service-btn">
-										<img border="0" src="../img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
+										<img border="0" src="/static/img/test/pa" alt="QQ" title="点击这里给我发消息" style="height: 20px;">
 										<span>客服二</span>
 									</a>
 
@@ -975,52 +973,52 @@
 									<em>咨询客服旺旺</em>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服七</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服三</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服四</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服五</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服六</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服八</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服九</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服十</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服一</span>
 									</a>
 
 									<a href="http://amos1.taobao.com/msg.ww?v=2&amp;uid=ilovebuy&amp;s=2" target="_blank" class="service-btn">
-										<img src="../img/test/online.ww" border="0" alt="淘宝旺旺">
+										<img src="/static/img/test/online.ww" border="0" alt="淘宝旺旺">
 										<span>客服二</span>
 									</a>
 
@@ -1029,7 +1027,7 @@
 								<div class="service-list">
 									<em>在线客服</em>
 									<a href="javascript:;" data-goods_id="429" class="service-btn">
-										<img src="../img/test/openim.png" width="20" height="20" border="0" alt="在线客服">
+										<img src="/static/img/test/openim.png" width="20" height="20" border="0" alt="在线客服">
 										<span>联系我们</span>
 									</a>
 								</div>
@@ -1557,7 +1555,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/47238.html" title="花花公子男士纯棉秋衣秋裤薄款棉毛衫青年全棉基础保暖内衣男套装">
-													<img src="../img/test/TB1RwYELXXXXXXHaXXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1RwYELXXXXXXHaXXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1569,7 +1567,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/48007.html" title="南极人男士内裤男纯棉质平角裤大码青年卡通四角内裤男生可爱裤头">
-													<img src="../img/test/TB13UeJKVXXXXcJXpXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB13UeJKVXXXXcJXpXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1581,7 +1579,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/46754.html" title="南极人男士保暖内衣男加厚加绒女冬秋衣秋裤中老年保暖套装防寒衣">
-													<img src="../img/test/TB186J.NpXXXXbXXFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB186J.NpXXXXbXXFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1593,7 +1591,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/55413.html" title="南极人丝袜连裤袜防勾丝秋季中厚打底裤袜秋冬款加绒加厚连体连脚">
-													<img src="../img/test/TB12zSlNVXXXXb.aXXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB12zSlNVXXXXb.aXXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1605,7 +1603,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/46670.html" title="南极人男士女士秋衣秋裤棉毛衫圆领打底薄款情侣保暖内衣女套装">
-													<img src="../img/test/TB1kTfaOXXXXXb6XpXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1kTfaOXXXXXb6XpXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1617,7 +1615,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/46611.html" title="南极人保暖内衣男士女士双层加厚加绒冬季秋衣秋裤套装黄金绒暖甲">
-													<img src="../img/test/TB1aShoOpXXXXb.XFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1aShoOpXXXXb.XFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1629,7 +1627,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/50058.html" title="袜子男纯棉中筒袜棉袜秋冬季短袜全棉吸汗防臭男士商务男袜礼盒装">
-													<img src="../img/test/TB17pAPMVXXXXcbXpXXYXGcGpXX_M2.SS2">
+													<img src="/static/img/test/TB17pAPMVXXXXcbXpXXYXGcGpXX_M2.SS2">
 												</a>
 											</div>
 											<div class="price">
@@ -1641,7 +1639,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/48868.html" title="南极人无痕内裤女纯棉裆性感大码中腰女士裤头棉质面料少女三角裤">
-													<img src="../img/test/TB18nkXOXXXXXXvXFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB18nkXOXXXXXXvXFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1653,7 +1651,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/48123.html" title="彼尔丹5条礼盒装男士内裤纯棉质性感潮青年平角裤四角裤男生裤头">
-													<img src="../img/test/TB1XxpOLpXXXXauapXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1XxpOLpXXXXauapXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1665,7 +1663,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/29637.html" title="英伦车一次性口罩防尘防雾霾病菌可爱男女冬季黑潮款透气50只加厚">
-													<img src="../img/test/TB1CXZANVXXXXalaFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1CXZANVXXXXalaFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1680,7 +1678,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/80904.html" title="秋冬季男士中长款风衣男款韩版修身型毛呢大衣男装呢子加厚外套潮">
-													<img src="../img/test/TB1deEVJVXXXXaVXVXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1deEVJVXXXXaVXVXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1692,7 +1690,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/20171.html" title="2016冬季加绒棉鞋男士休闲鞋韩版板鞋潮鞋冬款加厚保暖防水男鞋子">
-													<img src="../img/test/TB1m1qWNFXXXXcCXFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1m1qWNFXXXXcCXFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1704,7 +1702,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/71606.html" title="男士男鞋布鞋秋季潮鞋帆布鞋休闲鞋高帮鞋板鞋子懒人鞋冬季棉鞋男">
-													<img src="../img/test/TB1PlFbNpXXXXb7XFXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1PlFbNpXXXXb7XFXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1716,7 +1714,7 @@
 										<li class="goods-item first">
 											<div class="picture">
 												<a href="http://www.itsource.cn/71433.html" title="环球白色高帮帆布鞋女春秋男平底平跟学生板鞋黑布鞋韩版情侣球鞋">
-													<img src="../img/test/TB1vu39LFXXXXXHXXXXXXXXXXXX_!!0-item_pic.jpg">
+													<img src="/static/img/test/TB1vu39LFXXXXXHXXXXXXXXXXXX_!!0-item_pic.jpg">
 												</a>
 											</div>
 											<div class="price">
@@ -1806,7 +1804,7 @@
 						<!-- 商品后台上传的商品描述 -->
 						#*<div class="detail-content goods-detail-content">
 							<div class="ajax-loading">
-								<img src="../img/test/loading.gif" />
+								<img src="/static/img/test/loading.gif" />
 							</div>
 							
 
@@ -1836,21 +1834,21 @@
 			</p>
 		</div>
 		<!-- 头部右侧鼠标经过图片放大效果 _start -->
-		<script type="text/javascript" src="../js/bubbleup.js"></script>
+		<script type="text/javascript" src="/static/js/bubbleup.js"></script>
 		<!-- 头部右侧鼠标经过图片放大效果 _end -->
 		<!-- 套餐、店内排行等左右切换效果 _start-->
-		<script type="text/javascript" src="../js/tabs.js"></script>
+		<script type="text/javascript" src="/static/js/tabs.js"></script>
 		<!-- 套餐、店内排行等左右切换效果 _end -->
 		<!-- 右侧商品信息等定位切换效果 _start -->
-		<script type="text/javascript" src="../js/tabs_totop.js"></script>
+		<script type="text/javascript" src="/static/js/tabs_totop.js"></script>
 		<!-- 右侧商品信息等定位切换效果 _end -->
 		<!-- 放大镜 _start -->
-		<script type="text/javascript" src="../js/magiczoom.js"></script>
+		<script type="text/javascript" src="/static/js/magiczoom.js"></script>
 		<!-- 放大镜 _end -->
 		<!-- 控制图片经过放大 -->
-		<script type="text/javascript" src="../js/goods.js"></script>
+		<script type="text/javascript" src="/static/js/goods.js"></script>
 		<!-- 地址选择 _start -->
-		<script type="text/javascript" src="../js/select_region.js"></script>
+		<script type="text/javascript" src="/static/js/select_region.js"></script>
 		<!-- 地址选择 _end -->
 		<script id="SZY_GIFT_TEMPLATE" type="text">
 			<div class="prom-gift-list">
@@ -2297,7 +2295,7 @@
 										<div class="SZY-USER-NOT-LOGIN" style="">
 											<div class="user-pic">
 												<div class="user-pic-mask"></div>
-												<img src="../img/test/default_user_portrait_0.png">
+												<img src="/static/img/test/default_user_portrait_0.png">
 											</div>
 											<br>
 											<p>
@@ -2426,7 +2424,7 @@
 								</a>
 								<div class="sidebar-code quick-sidebar">
 									<i class="arrow-right"></i>
-									<img src="../img/test/mall_wx_qrcode_0.jpg">
+									<img src="/static/img/test/mall_wx_qrcode_0.jpg">
 								</div>
 							</li>
 							<li class="returnTop" style="display: none;">
@@ -2554,7 +2552,7 @@
 		<div class="site-footer">
 
 			<div class="footer-service">
-				<div align="center"><img src="../img/test/14778844965714.jpg" alt="" height="85" width="1210"></div>
+				<div align="center"><img src="/static/img/test/14778844965714.jpg" alt="" height="85" width="1210"></div>
 			</div>
 
 			<div class="footer-related">
@@ -2685,7 +2683,7 @@
 						<div class="code-content">
 
 							<div class="code ">
-								<img src="../img/test/mall_wx_qrcode_0.jpg">
+								<img src="/static/img/test/mall_wx_qrcode_0.jpg">
 							</div>
 
 						</div>
@@ -2756,11 +2754,11 @@
 				<p>&nbsp;</p>
 
 				<p class="footer-fp-img">
-					<a target="_blank" href="#"><img src="../img/test/kxwz.png"></a>
-					<a target="_blank" href="#"><img src="../img/test/smyz.png"></a>
-					<a target="_blank" href="#"><img src="../img/test/cxyz.jpg"></a>
-					<a target="_blank" href="#"><img src="../img/test/hyyz.png"></a>
-					<a target="_blank" href="#"><img src="../img/test/jpfw.png"></a>
+					<a target="_blank" href="#"><img src="/static/img/test/kxwz.png"></a>
+					<a target="_blank" href="#"><img src="/static/img/test/smyz.png"></a>
+					<a target="_blank" href="#"><img src="/static/img/test/cxyz.jpg"></a>
+					<a target="_blank" href="#"><img src="/static/img/test/hyyz.png"></a>
+					<a target="_blank" href="#"><img src="/static/img/test/jpfw.png"></a>
 				</p>
 			</div>
 
@@ -2792,8 +2790,8 @@
 						//发送请求获取价格和库存
 						let param = {};
 						let productId = $model.product.id;
-						let indexs = this.skuSelected.join("_");// [0,0]   0_0
-						axios.get("http://localhost:9527/services/product/sku/skuChange?productId="+productId+"&indexs="+indexs)
+						let indexs = this.skuSelected.join("-");// [0,0]   0_0
+						axios.get("http://localhost:6969/services/product/sku/skuChange?productId="+productId+"&indexs="+indexs)
 								.then(res=>{
 									this.price = res.data.price;
 									this.store = res.data.store;
@@ -2813,8 +2811,8 @@
 		</script>
 
 
-		<script type="text/javascript" src="../js/jquery.fly.min.js"></script>
-		<script type="text/javascript" src="../js/szy.cart.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.fly.min.js"></script>
+		<script type="text/javascript" src="/static/js/szy.cart.js"></script>
 		<!--[if lte IE 9]>
 <script type="text/javascript" src="/js/requestAnimationFrame.js"></script>
 <![endif]-->

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sku")
@@ -18,6 +19,11 @@ public class SkuController {
     @Autowired
     public ISkuService skuService;
 
+
+    @GetMapping("/skuChange")
+    public Map<String,Object> ckuChang(@RequestParam("productId") Long productId,@RequestParam("indexs") String indexs){
+        return skuService.skuChang(productId,indexs);
+    }
     /**
     * 保存和修改公用的
     * @param sku  传递的实体
