@@ -1,6 +1,7 @@
 package cn.itsource.aigou.controller;
 
 import cn.itsource.aigou.domain.Product;
+import cn.itsource.aigou.domain.ProductParam;
 import cn.itsource.aigou.domain.Specification;
 import cn.itsource.aigou.service.IProductService;
 import cn.itsource.aigou.query.ProductQuery;
@@ -22,6 +23,15 @@ public class ProductController {
     @Autowired
     public IProductService productService;
 
+    /**
+     * 在商城里面搜索ES里面的商品
+     * @param productParam
+     * @return
+     */
+    @PostMapping("/queryOnSale")
+    public PageList<Product> queryOnSale(@RequestBody ProductParam productParam){
+      return   productService.queryOnSale(productParam);
+    }
 
     /**
      * 批量上架

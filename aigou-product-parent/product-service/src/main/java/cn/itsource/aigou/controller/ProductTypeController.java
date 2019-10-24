@@ -3,6 +3,7 @@ package cn.itsource.aigou.controller;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.service.IProductTypeService;
 import cn.itsource.aigou.query.ProductTypeQuery;
+import cn.itsource.aigou.vo.ProductTypeCrumbVo;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -18,6 +19,16 @@ import java.util.List;
 public class ProductTypeController {
     @Autowired
     public IProductTypeService productTypeService;
+
+    /**
+     * 根据前端home页传递producttypeID值查询type表里面当前商品数据和同级商品数据
+     * @param productTypeId
+     * @return
+     */
+    @GetMapping("/getCrumb")
+    public List<ProductTypeCrumbVo> loadTyeCrumb(@RequestParam("ProductTypeId") Long productTypeId){
+        return  productTypeService.loadTypeCrumb(productTypeId);
+    }
 
     /**
     * 保存和修改公用的

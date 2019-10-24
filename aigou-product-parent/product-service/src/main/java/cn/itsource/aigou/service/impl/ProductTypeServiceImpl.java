@@ -6,8 +6,10 @@ import cn.itsource.aigou.client.StaticPageClient;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.mapper.ProductTypeMapper;
 import cn.itsource.aigou.service.IProductTypeService;
+import cn.itsource.aigou.vo.ProductTypeCrumbVo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mysql.cj.xdevapi.JsonArray;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +59,42 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
         model.put("staticRoot", "D:\\software\\JetBrains\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\");
         staticPageClient.generateStaticPage(templatePath, targetPath, model);
     }
+    /**
+     * 根据前端home页传递producttypeID值查询type表里面当前商品数据和同级商品数据
+     * @param productTypeId
+     * @return
+     */
+    @Override
+    public List<ProductTypeCrumbVo> loadTypeCrumb(Long productTypeId) {
+        //1.productTypeId查询数据库当前商品数据
+        ProductType productType = baseMapper.selectById(productTypeId);
+        //2.获取到数据里面path字段数据,并分割为list集合的数据
+        String path = productType.getPath();
+        List<Long> ids =pathSpilt(path);
+        //3.根据这些id数据库查询相对应的商品，各个级别的类型数据
+        List<ProductType> productTypes = baseMapper.selectBatchIds(ids);
+        //productTypeCrumbVos用来封装数据
+        List<ProductTypeCrumbVo> productTypeCrumbVos = new ArrayList<>();
+        for (ProductType type : productTypes) {
+            ProductTypeCrumbVo productTypeCrumbVo = new ProductTypeCrumbVo();
+            productTypeCrumbVo.setProductType(type);
+            //查询当前商品同级的类型
+            List<ProductType> otherTypes = baseMapper.selectList(new QueryWrapper<ProductType>().eq("pid", type.getPid()));
+            productTypeCrumbVo.setOtherTypes(otherTypes);
+            productTypeCrumbVos.add(productTypeCrumbVo);
+        }
+        return productTypeCrumbVos;
+    }
+
+    private List<Long> pathSpilt(String path) {
+        String[] idstr = path.substring(1).split("\\.");
+        List<Long> ids = new ArrayList<>();
+        for (String id : idstr) {
+            ids.add(Long.parseLong(id));
+        }
+        return ids;
+    }
+
     @Override
     public List<ProductType> loadTypeTree() {
 

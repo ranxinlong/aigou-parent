@@ -206,6 +206,33 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     }
 
     /**
+     * 在商城里面搜索ES里面的商品
+     * @param productParam
+     * @return
+     */
+    @Override
+    public PageList<Product> queryOnSale(ProductParam productParam) {
+        //查询再es的数据
+        PageList<ProductDoc> search = client.search(productParam);
+        //封装成pagelist
+        List<Product> list = new ArrayList<>();
+        Product product = null;
+        List<ProductDoc> rows = search.getRows();
+        for (ProductDoc row : rows) {
+            product = new Product();
+            product.setId(row.getId());
+            product.setMedias(row.getMedias());
+            product.setName(row.getName());
+            product.setSubName(row.getSubName());
+            product.setSaleCount(row.getSaleCount());
+            product.setMaxPrice(row.getMaxPrice());
+            product.setMinPrice(row.getMinPrice());
+            list.add(product);
+        }
+        return new PageList<>(search.getTotal(),list);
+    }
+
+    /**
      * 批量上架
      * @param idList
      * @return
@@ -243,6 +270,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
      * @return
      */
     private ProductDoc product2Doc(Product product) {
+        System.out.println(product);
         ProductDoc productDoc = new ProductDoc();
         Brand brand = brandMapper.selectById(product.getBrandId());
         ProductType productType = typeMapper.selectById(product.getProductTypeId());
@@ -255,6 +283,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         productDoc.setAll(builder.toString());
 
         productDoc.setProductTypeId(product.getProductTypeId());
+
         productDoc.setBrandId(product.getBrandId());
         //最高最低价格
         List<Sku> skus = skuMapper.selectList(new QueryWrapper<Sku>().

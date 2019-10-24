@@ -35,7 +35,7 @@
       <module name="aigou-zuul" target="1.7" />
       <module name="asd" target="1.5" />
       <module name="common-interface" target="1.5" />
-      <module name="common-serice" target="1.5" />
+      <module name="common-serice" target="1.7" />
       <module name="plat-interface" target="1.5" />
       <module name="plat-service" target="1.5" />
       <module name="product-interface" target="1.7" />

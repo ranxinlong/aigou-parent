@@ -3,6 +3,7 @@ package cn.itsource.aigou.controller;
 import cn.itsource.aigou.domain.Brand;
 import cn.itsource.aigou.service.IBrandService;
 import cn.itsource.aigou.query.BrandQuery;
+import cn.itsource.aigou.vo.BrandVo;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.LetterUtil;
 import cn.itsource.basic.util.PageList;
@@ -20,6 +21,17 @@ import java.util.List;
 public class BrandController {
     @Autowired
     public IBrandService brandService;
+
+    /**
+     * 商城界面根据ProductId获取当前类全部商品和大写字母
+     * @param productId
+     * @return
+     */
+    @GetMapping("/getByProductId")
+    public BrandVo getByProductId(@RequestParam("productId") Long productId){
+       return brandService.getByProductId(productId);
+    }
+
 
     /**
     * 保存和修改公用的

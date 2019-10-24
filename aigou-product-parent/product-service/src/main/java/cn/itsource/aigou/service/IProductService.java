@@ -1,6 +1,7 @@
 package cn.itsource.aigou.service;
 
 import cn.itsource.aigou.domain.Product;
+import cn.itsource.aigou.domain.ProductParam;
 import cn.itsource.aigou.domain.Specification;
 import cn.itsource.aigou.query.ProductQuery;
 import cn.itsource.aigou.vo.SkuVo;
@@ -54,4 +55,10 @@ public interface IProductService extends IService<Product> {
      * @return
      */
     void offSale(List<Long> idlist);
+    /**
+     * 在商城里面搜索ES里面的商品
+     * @param productParam
+     * @return
+     */
+    PageList<Product> queryOnSale(ProductParam productParam);
 }

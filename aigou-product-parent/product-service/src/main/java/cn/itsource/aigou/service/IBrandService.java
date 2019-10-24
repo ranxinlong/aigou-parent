@@ -2,6 +2,7 @@ package cn.itsource.aigou.service;
 
 import cn.itsource.aigou.domain.Brand;
 import cn.itsource.aigou.query.BrandQuery;
+import cn.itsource.aigou.vo.BrandVo;
 import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -16,4 +17,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IBrandService extends IService<Brand> {
 
     PageList<Brand> queryPage(BrandQuery query);
+    /**
+     * 商城界面根据ProductId获取当前类全部商品和大写字母
+     * @param productId
+     * @return
+     */
+    BrandVo getByProductId(Long productId);
 }
